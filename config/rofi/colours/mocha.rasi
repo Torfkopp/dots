@@ -1,0 +1,12 @@
+@import "~/.config/rofi/colours/catppuccin-mocha"
+
+* {
+    main-bg:            #11111be6;
+    main-fg:            @text;
+    main-br:            @green;
+    main-ex:            @rosewater;
+    select-bg:          @green;
+    select-fg:          @crust;
+    separatorcolor:     transparent;
+    border-color:       transparent;
+}

@@ -1,0 +1,13 @@
+@import "catppuccin-mocha"
+
+* {
+    background:     @base;
+    background-alt: @mantle;
+    foreground:     @text;
+    selected-foreground: @mantle;
+    active-foreground: @mantle;
+    urgent-foreground: @mantle;
+    selected:       @green;
+    active:         @peach;
+    urgent:         @red;
+}

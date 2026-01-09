@@ -13,13 +13,13 @@ chosen=$(echo -e "$options" | rofi_cmd)
 
 case "$chosen" in
     📷)
-        command grimblast save screen && notify-send -u low "Screenshot saved"
+        command grimblast -w 1 save screen && notify-send -u low "Screenshot saved"
         ;;
     🪟)
-        command grimblast save active && notify-send -u low "Screenshot saved"
+        command grimblast -w 1 save active && notify-send -u low "Screenshot saved"
         ;;
     ✂️)
-        command grimblast save area && notify-send -u low "Screenshot saved"
+        command grimblast -w 1 save area && notify-send -u low "Screenshot saved"
         ;;
     "⏳5")
         command grimblast -w 5 save screen && notify-send -u low "Screenshot saved"

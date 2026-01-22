@@ -6,24 +6,8 @@ kb_hint_conf=("$keyconfDir/hyprland.conf" "$keyconfDir/keybindings.conf" "$keyco
 kb_hint_conf+=("${ROFI_KEYBIND_HINT_CONFIG[@]}")
 kb_cache="$XDG_RUNTIME_DIR/hypr/keybinds_hint.rofi"
 themeFile="$HOME/.config/rofi/keybinds/keybinds.rasinc"
-[ -f "$kb_cache" ] && {
-    trap '$confDir/rofi/keybinds/hint-hyprland.py --format rofi > "$kb_cache" && echo "Keybind cache updated" ' EXIT
-}
-output="$(if
-    ! cat "$kb_cache" 2> /dev/null
-then
-    "./hint-hyprland.py" --format rofi | tee "$kb_cache"
-fi)"
-wait
-if [ -z "$output" ]; then
-    notify-send "Keybind Hint" "Initialization failed."
-    exit 0
-fi
-if ! command -v rofi &> /dev/null; then
-    echo "$output"
-    echo "rofi not detected. Displaying on terminal instead"
-    exit 0
-fi
+output=$($confDir/rofi/keybinds/hint-hyprland.py --format rofi)
+
 hypr_border=${hypr_border:-$(hyprctl -j getoption decoration:rounding | jq '.int')}
 hypr_width=${hypr_width:-$(hyprctl -j getoption general:border_size | jq '.int')}
 wind_border=$((hypr_border * 3 / 2))

@@ -15,6 +15,7 @@ xontrib load fish_completer
 xontrib load sh
 xontrib load pipeliner
 xontrib load gitinfo
+xontrib load jedi
 
 $XONTRIB_PROMPT_STARSHIP_RIGHT_CONFIG = '~/.config/starship/nerd-font-symbols.toml'
 xontrib load prompt_starship

@@ -28,7 +28,7 @@ prepend_rules = [
   # PDFs → zathura
   { mime = "application/pdf", use = "zathura_pdf" },
 
-  # Code files → nvim
+  # Code files → micro
   { mime = "text/*", use = "micro" },
 ]
 

@@ -1,6 +1,6 @@
 [opener]
 imv_image = [
-  { run = 'imv "$0"', desc = "imv Image Viewer", block = false, for = "unix" },
+  { run = 'imv "$@"', desc = "imv Image Viewer", block = false, for = "unix" },
 ]
 
 mpv_video = [
@@ -12,7 +12,7 @@ zathura_pdf = [
 ]
 
 micro = [
-  { run = 'micro "$0"', desc = "Micro editor", block = true, for = "unix" },
+  { run = 'micro "$@"', desc = "Micro editor", block = true, for = "unix" },
 ]
 
 edit = [ { run = 'micro "$@"', block = true, desc = "Micro" } ]

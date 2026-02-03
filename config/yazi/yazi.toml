@@ -35,10 +35,3 @@ prepend_rules = [
 [mgr]
 show_hidden = false
 linemode = "size_and_mtime"
-
-[theme]
-use = "catppuccin-mocha"
-
-[icons]
-use = "catppuccin"
-

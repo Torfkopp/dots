@@ -10,6 +10,8 @@ def _y(args):
 
 aliases["y"] = _y
 
+$XONSH_SHOW_TRACEBACK = True
+
 xontrib load vox autovox
 xontrib load fish_completer
 xontrib load sh
